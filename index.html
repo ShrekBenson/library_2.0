@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="src/css/styles.css">
+
+  <title>Look for a book</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="src/img/logo.png" alt="Logo">
+        <h1>ookLook</h1>
+      </div>
+      
+      <div class="profile">
+        <p>Diego Antonio</p>
+        <div class="profile__picture">
+          <img src="src/img/profile-picture.png" alt="Photo">
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      
+    </div>
+
+    <div class="menu">
+      <button class="menu__button add-book" type="button" onclick="modal.showModal()">
+        <img src="src/img/add-book.png" alt="Add book">
+        + Add book
+      </button>
+    </div>
+  </div>
+
+  <dialog class="modal">
+    <div class="modal__body">      
+      <div class="modal__close" onclick="modal.close()">
+        <img src="./src/img/close-outline.svg" alt="Close">
+      </div>
+
+      <form action="#" method="dialog" id="newBookForm">
+        <section class="form">
+          <h2>Add a new book</h2>
+          <div class="form__field">
+            <input type="text" id="title" autocomplete="off" placeholder="" required>
+            <label for="title">Title</label>
+          </div>
+          <div class="form__field">
+            <input type="text" id="author" autocomplete="off" placeholder="" required>
+            <label for="author">Author</label>
+          </div>
+          <div class="form__field">
+            <input type="tel" id="pages" autocomplete="off" placeholder="" required>
+            <label for="pages">Pages</label>
+          </div>
+          <div class="form__field--checkbox">
+            <input type="checkbox" id="readed">
+            <label for="readed">Readed</label>
+          </div>
+        </section>
+      </form>
+
+      <div class="modal__buttons">
+        <button id="addBook" type="submit" form="newBookForm">Add book</button>
+        <button type="button" onclick="modal.close()">Cancel</button>
+      </div>
+    </div>
+  </dialog>
+    
+  <script src="src/js/index.js" defer></script>
+</body>
+</html>
