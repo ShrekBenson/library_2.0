@@ -237,7 +237,7 @@ nav{
 .form__field{
   position: relative;
   height: 32px;
-  margin-bottom: 21px;
+  margin-bottom: 27px;
 }
 .form__field>input{
   position: absolute;
@@ -266,9 +266,18 @@ nav{
               left .2s ease-in-out,
               font-size .2s ease-in-out;
 }
+.form__field>input:invalid{
+  border-bottom: 1px solid red;
+}
 .form__field--checkbox{
   padding: 0 8px;
   margin-top: 32px;
+}
+.form__field .error {
+  position: absolute;
+  bottom: -16px;
+  font-size: .75rem;
+  color: red;
 }
 
 .modal__buttons{

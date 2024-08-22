@@ -45,19 +45,22 @@
       </div>
 
       <form action="#" method="dialog" id="newBookForm">
-        <section class="form">
+        <section class="form" novalidate>
           <h2>Add a new book</h2>
           <div class="form__field">
             <input type="text" id="title" autocomplete="off" placeholder="" required>
             <label for="title">Title</label>
+            <span id="titleError" class="error" aria-live="polite"></span>
           </div>
           <div class="form__field">
             <input type="text" id="author" autocomplete="off" placeholder="" required>
             <label for="author">Author</label>
+            <span id="authorError" class="error" aria-live="polite"></span>
           </div>
           <div class="form__field">
             <input type="tel" id="pages" autocomplete="off" placeholder="" required>
             <label for="pages">Pages</label>
+            <span id="pagesError" class="error" aria-live="polite"></span>
           </div>
           <div class="form__field--checkbox">
             <input type="checkbox" id="readed">
